@@ -34,7 +34,8 @@ For \verb{\%to\%}, the non-standard evaluation takes place for \code{to}.}
 }
 \description{
 The input is translated to a specified language with Google Translate.
-See \code{language} for the available languages.
+For the translation of help document, the source document is derived from
+RDocumentation. See \code{language} for the available languages.
 }
 \examples{
 \dontrun{
@@ -51,4 +52,8 @@ translate(help(str))
 help(str) \%to\% ja
 }
 
+}
+\references{
+Google Translate \url{https://translate.google.com/},
+RDocumentation \url{https://www.rdocumentation.org/}
 }

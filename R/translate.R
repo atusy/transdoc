@@ -1,7 +1,8 @@
 #' Translate a text, web, or help document.
 #'
 #' The input is translated to a specified language with Google Translate.
-#' See `language` for the available languages.
+#' For the translation of help document, the source document is derived from
+#' RDocumentation. See `language` for the available languages.
 #'
 #' @param doc A character vector of text, a string of URL, or an object returned
 #'  by `help` or `?`.
@@ -12,6 +13,10 @@
 #' @param from `doc` is translated from the specified language. Currently,
 #' `"auto"` is the only supported value and is the default value.
 #' @param ... Arguments passed to the methods.
+#'
+#' @references
+#' Google Translate \url{https://translate.google.com/},
+#' RDocumentation \url{https://www.rdocumentation.org/}
 #'
 #' @examples
 #' \dontrun{
