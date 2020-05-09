@@ -1,5 +1,5 @@
 Package: transdoc
-Title: Translate Text, Web, and Help documents
+Title: Translate Text, Web, and Help Documents
 Version: 0.0.1
 Authors@R: 
     person(given = "Atsushi",
