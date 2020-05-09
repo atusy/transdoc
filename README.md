@@ -31,7 +31,7 @@ install.packages("transdoc")
 
 ### Translate a help document
 
-The overidden `?` launches your browser and shows a translated help.
+The replaced `?` launches your browser and shows a translated help.
 
 ``` r
 library(transdoc)

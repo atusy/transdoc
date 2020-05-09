@@ -1,16 +1,16 @@
 Package: transdoc
 Title: Translate Text, Web, and Help documents
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: 
     person(given = "Atsushi",
            family = "Yasumoto",
            role = c("aut", "cre"),
            email = "atusy.rpkg@gmail.com",
            comment = c(ORCID = "0000-0002-8335-495X"))
-Description: Translate text, web, and help documents with Google Translate.
+Description: Translate text, web, and help documents to a specified language.
   Especially, the replaced `?` function would be useful for non-native English
-  users. In your Rprofile, add `option(transdoc_to = "your-language")` such as
-  `"ja"` for Japanese to change the default destination language.
+  users. In the ".Rprofile" file, add `option(transdoc_to = "your-language")`
+  such as `"ja"` for Japanese to change the default destination language.
 URL: https://transdoc.atusy.net/, https://github.com/atusy/transdoc
 BugReports: https://github.com/atusy/transdoc/issues
 License: MIT + file LICENSE
