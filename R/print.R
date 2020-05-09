@@ -4,8 +4,9 @@
 #' Google Translate translates the input documents.
 #'
 #' @inheritParams translate
+#' @inheritParams base::print
 #'
-#' @example
+#' @examples
 #' \dontrun{
 #' print(translate("This text will be translated to Japanese", "ja"))
 #' print(translate("https://transdoc.atusy.net/", "ja"))
@@ -15,7 +16,7 @@
 #' @name print-methods
 #' @export
 print.transdoc_help <- function(x, to = "default", ...) {
-  check_offline(msg = "Being offline.", action = warning) {
+  if (check_offline(msg = "Being offline.", action = warning)) {
     class(x) <- "help_files_with_topic"
     print(x)
   } else {
@@ -27,7 +28,7 @@ print.transdoc_help <- function(x, to = "default", ...) {
 print.transdoc_website <- function(x, ...) {
   check_offline()
   x$to <- transdoc_to(x$to)
-  browseURL(url_google_translate(x$to, x$topic, type = "website"))
+  utils::browseURL(url_google_translate(x$to, x$topic, type = "website"))
   invisible(x)
 }
 
@@ -35,6 +36,6 @@ print.transdoc_website <- function(x, ...) {
 print.transdoc_text <- function(x, ...) {
   check_offline()
   x$to <- transdoc_to(x$to)
-  browseURL(url_google_translate(x$to, x$topic, type = "text"))
+  utils::browseURL(url_google_translate(x$to, x$topic, type = "text"))
   invisible(x)
 }

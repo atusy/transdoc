@@ -1,6 +1,7 @@
 #' Translate a text, web, or help document.
 #'
 #' The input is translated to a specified language with Google Translate.
+#' See `language` for the available languages.
 #'
 #' @param doc A character vector of text, a string of URL, or an object returned
 #'  by `help` or `?`.
@@ -8,7 +9,8 @@
 #'  (e.g., `"en"`, `"ja"`, `"de"`). The default value, `"default"`,
 #'  is equivalent to `getOption("transdoc_to", "en")`.
 #'  For `%to%`, the non-standard evaluation takes place for `to`.
-#' @param from `doc` is translated from the specified language (default: `auto`).
+#' @param from `doc` is translated from the specified language. Currently,
+#' `"auto"` is the only supported value and is the default value.
 #' @param ... Arguments passed to the methods.
 #'
 #' @examples

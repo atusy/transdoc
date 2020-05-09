@@ -1,9 +1,9 @@
 #' Show help on Google Translate
 #'
 #' The help document is translated to the language based on
-#' `getOption("transdoc_to, "en")`.
+#' `getOption("transdoc_to, "en")`. See `language` for the available languages.
 #'
-#' @param e1,e2 Arguments passed to [utils::`?`()]
+#' @param e1,e2 Arguments passed to ``utils::`?` ``
 #'
 #' @examples
 #' \dontrun{

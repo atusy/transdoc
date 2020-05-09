@@ -1,5 +1,7 @@
 check_offline <- function(action = stop, msg = "Being offline.", ...) {
-  if (!curl::has_internet()) {
+  offline <- !curl::has_internet()
+  if (offline) {
     action(msg, ...)
   }
+  offline
 }
