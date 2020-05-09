@@ -1,23 +1,34 @@
+#' Show help on Google Translate
+#'
+#' The help document is translated to the language based on
+#' `getOption("transdoc_to, "en")`.
+#'
+#' @param e1,e2 Arguments passed to [utils::`?`()]
+#'
+#' @examples
+#' \dontrun{
+#' options(transdoc_to = "ja")
+#' ?base::c
+#' }
+#' @export
 `?` <- function(e1, e2) {
   .help <- do.call(utils::`?`, list(e1 = substitute(e1), e2 = substitute(e2)))
+  as_transdoc_help(.help)
+}
 
+as_transdoc_help <- function(.help) {
   if (!identical("help_files_with_topic", class(.help))) {
     return(.help)
   }
 
   package <- sub(".*/([^/]+)/help/([^/]+)$", "\\1", .help[1])
   description <- utils::packageDescription(package)
-
-  disconnected <- !curl::has_internet()
   on_cran <- identical(description$Repository, "CRAN")
   builtin <- any(c("base", "recommended") %in% description$Priority)
   unavailable <- !on_cran && !builtin
-  if (disconnected || unavailable) {
-    warning(
-      "Showing local help ",
-      if (disconnected) "because of being offline",
-      if (disconnected && not_cran) "and",
-      if (unavailable) "because the package is not installed from CRAN"
+  if (unavailable) {
+    message(
+      "Returning local help because the package is not installed from CRAN."
     )
     return(.help)
   }

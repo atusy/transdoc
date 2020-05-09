@@ -1,5 +1,5 @@
 Package: transdoc
-Title: What the Package Does (One Line, Title Case)
+Title: Translate Documents and Help
 Version: 0.0.0.9000
 Authors@R: 
     person(given = "First",
