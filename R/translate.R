@@ -50,10 +50,10 @@ translate.character <- function(doc, to = "default", from = "auto", ...) {
   structure(
     list(topic = paste(doc, collapse = "\n"), to = to, from = from, ...),
     class = if (length(doc) == 1L && grepl("https?://", doc)) {
-        "transdoc_website"
-      } else {
-        "transdoc_text"
-      }
+      "transdoc_website"
+    } else {
+      "transdoc_text"
+    }
   )
 }
 
@@ -64,7 +64,7 @@ translate.help_files_with_topic <- function(doc,
                                             from = "auto",
                                             ...) {
   topic <- as_transdoc_help(doc)
-  if (identical(class(topic),"help_files_with_topic")) {
+  if (identical(class(topic), "help_files_with_topic")) {
     return(topic)
   }
   translate.transdoc_help(as_transdoc_help(doc), to = to, from = from, ...)
@@ -83,5 +83,3 @@ translate.transdoc_help <- function(doc, to = "default", from = "auto", ...) {
     ...
   )
 }
-
-

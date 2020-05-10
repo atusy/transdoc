@@ -22,4 +22,3 @@ url_rdocumentation <- function(package, version, topic) {
     package, version, topic
   )
 }
-

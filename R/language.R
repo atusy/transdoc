@@ -6,7 +6,7 @@
 #' @docType data
 #' @format A named character vector.
 #' @export
-language <-c(
+language <- c(
   afrikaans = "af", albanian = "sq", arabic = "ar", azerbaijani = "az",
   basque = "eu", belarusian = "be", bengali = "bn", bulgarian = "bg",
   catalan = "ca", chinese_simplified = "zh-CN", chinese_traditional = "zh-TW",
@@ -22,4 +22,5 @@ language <-c(
   russian = "ru", serbian = "sr", slovak = "sk", slovenian = "sl",
   spanish = "es", swahili = "sw", swedish = "sv", tamil = "ta",
   telugu = "te", thai = "th", turkish = "tr", ukrainian = "uk",
-  urdu = "ur", vietnamese = "vi", welsh = "cy", yiddish = "yi")
+  urdu = "ur", vietnamese = "vi", welsh = "cy", yiddish = "yi"
+)
