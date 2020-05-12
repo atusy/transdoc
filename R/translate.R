@@ -19,7 +19,7 @@
 #' RDocumentation \url{https://www.rdocumentation.org/}
 #'
 #' @examples
-#' \dontrun{
+#' if (interactive()) {
 #' # Translate a text document
 #' translate("This text will be translated", "ja")
 #' "This text will be translated" %to% ja

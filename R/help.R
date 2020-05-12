@@ -6,7 +6,7 @@
 #' @param e1,e2 Arguments passed to ``utils::`?` ``
 #'
 #' @examples
-#' \dontrun{
+#' if (interactive()) {
 #' options(transdoc_to = "ja")
 #' ?base::c
 #' }

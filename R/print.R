@@ -7,7 +7,7 @@
 #' @inheritParams base::print
 #'
 #' @examples
-#' \dontrun{
+#' if (interactive()) {
 #' print(translate("This text will be translated to Japanese", "ja"))
 #' print(translate("https://transdoc.atusy.net/", "ja"))
 #' print(translate(?base::c, "ja"))
