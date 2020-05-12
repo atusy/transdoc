@@ -4,7 +4,7 @@ Version: 0.0.1
 Authors@R: 
     person(given = "Atsushi",
            family = "Yasumoto",
-           role = c("aut", "cre"),
+           role = c("aut", "cre", "cph"),
            email = "atusy.rpkg@gmail.com",
            comment = c(ORCID = "0000-0002-8335-495X"))
 Description: Translate text, web, and help documents to a specified language.
