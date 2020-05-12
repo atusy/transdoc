@@ -33,6 +33,18 @@
 #' help(str) %to% ja
 #' }
 #'
+#' @value A named list whose minimum components are `topic` (character), `to`
+#' (character), and `from` (character). Arguments given as ellipsis will also
+#' be appended to the returning list.
+#' 
+#' The returned list gains a class of either `transdoc_website` or
+#' `transdoc_text` depending on the value specified to the `doc` argument. The
+#' `transdoc_website` class object will be returned when the given value is a
+#' single value of character which starts with "http://" or "https://", an
+#' object with the `help_files_with_topic` class, or an object with the
+#' `transdoc_help` class. The `transdoc_text` object will be returned when the
+#' given value is a character vector which does not match the above case.
+#' 
 #' @export
 translate <- function(doc, to = "default", from = "auto", ...) {
   UseMethod("translate")

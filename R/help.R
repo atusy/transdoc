@@ -10,6 +10,14 @@
 #' options(transdoc_to = "ja")
 #' ?base::c
 #' }
+#' 
+#' @value
+#' The `transdoc_help` class object which inherits the `help_files_with_topic`
+#' class. In addition to the `help_files_with_topic` class object, the
+#' returning value has attributes `package` to indicate which package does the
+#' topic belongs,`version` to indicate the version of the `package` attribute,
+#' and `topic` to indicate the help topic.
+#' 
 #' @export
 `?` <- function(e1, e2) {
   .help <- do.call(utils::`?`, list(e1 = substitute(e1), e2 = substitute(e2)))
